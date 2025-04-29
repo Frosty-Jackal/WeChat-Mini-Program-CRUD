@@ -81,7 +81,7 @@ public class DeviceDao {
 		String resultMsg="ok";
 		/*--------------------获取变量 完毕--------------------*/
 		/*--------------------数据操作 开始--------------------*/
-		Db updateDb = new Db("jeff");
+		Db updateDb = new Db("<dbname>");
 		String sql=data.getParam().getString("sql");
 		showDebug("[updateRecord]"+sql);
 		updateDb.executeUpdate(sql);
@@ -100,7 +100,7 @@ public class DeviceDao {
 		List jsonList = new ArrayList();
 		/*--------------------获取变量 完毕--------------------*/
 		/*--------------------数据操作 开始--------------------*/
-		Db queryDb = new Db("jeff");
+		Db queryDb = new Db("<dbname>");
 		String sql=data.getParam().getString("sql");
 		showDebug("[queryRecord]构造的SQL语句是：" + sql);
 		try {
